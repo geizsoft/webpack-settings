@@ -9,7 +9,7 @@ const webpackConfig = require('./webpack.dev.config')
 const config = require('../config')
 
 if (!process.env.NODE_ENV) {
-    process.env.NODE_ENV = config.dev.env.NODE_ENV
+    process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
 const proxyTable = config.dev.proxyTable;
 const autoOpenBrowser = !!config.dev.autoOpenBrowser;
@@ -26,7 +26,7 @@ const devMiddleware = require('webpack-dev-middleware')(compiler, {
 })
 
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {
-    log: () => {}
+    log: false
 })
 
 app.use(require('compression')());

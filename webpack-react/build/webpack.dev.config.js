@@ -1,11 +1,9 @@
-const {resolve} = require('path')
-// 清理上次编译的内容 **
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const merge = require('webpack-merge')
 const webpackBaseConfig = require('./webpack.base.config.js')
-const FriendlyErrorsPlugin = require('friendly-errors-plugin')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 
 module.exports = merge(webpackBaseConfig, {
     mode:'development',

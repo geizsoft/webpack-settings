@@ -2,7 +2,7 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const config = require('../config')
 const {join} = require('path')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+// const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 function resolve(dir) {
     return join(__dirname, "..", dir);
   }
@@ -53,12 +53,12 @@ module.exports = {
                 ]
             },
             {
-                test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
-            },
-            {
                 test: /\.less$/,
                 use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader']
+            },
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
                 test: /\.(png|jpg|gif|jpeg)$/,
@@ -72,8 +72,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: './css/build.css'
-        }),
-        new CleanWebpackPlugin()
+            filename: './css/[name].css'
+        })
     ]
 }

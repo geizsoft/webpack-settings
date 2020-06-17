@@ -5,13 +5,11 @@ import {Button} from 'antd'
 import { renderRoutes } from 'react-router-config'
 
 const App = (props) => {
-    console.log(props)
-    return <div>
-        <h1>test</h1>
-        <Button type="primary">1</Button>
-        <React.Fragment>
+    return (
+        <div>
+            <Button type='primary'>open</Button>
             {renderRoutes(props.route.routes)}
-        </React.Fragment>
-    </div>
+        </div>
+    )
 }
 export default App
