@@ -1,7 +1,7 @@
 import React from 'react'
 import 'antd/dist/antd.css'
 import './index.less'
-import {Button} from 'antd'
+import { Button } from 'antd'
 import { renderRoutes } from 'react-router-config'
 
 const App = (props) => {
@@ -12,4 +12,5 @@ const App = (props) => {
         </div>
     )
 }
+
 export default App

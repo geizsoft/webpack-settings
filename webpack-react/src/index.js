@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 // import App from './App.jsx'
-import {BrowserRouter as Router, Switch} from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import router from '@/router/router'
 import { renderRoutes } from 'react-router-config'
 
